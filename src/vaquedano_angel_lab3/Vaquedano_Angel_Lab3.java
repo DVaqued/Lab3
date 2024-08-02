@@ -105,6 +105,19 @@ public class Vaquedano_Angel_Lab3 {
                 System.out.println("=" + resultado);
 
             }
+            if (ejercicio == 3) {
+                System.out.println("Digite la cantidad de filas que desea que se realicen: ");
+                int numero = lea.nextInt();
+                for (int contador = 1; contador <= numero; contador++) {
+                    for (int contador2 = 1; contador2 < contador; contador2++) {
+                        System.out.print("  ");
+                    }
+                    for (int contador3 = numero; contador3 >= contador; contador3--) {
+                        System.out.print(contador3 + " ");
+                    }
+                    System.out.println();
+                }
+            }
         }
     }
 }
