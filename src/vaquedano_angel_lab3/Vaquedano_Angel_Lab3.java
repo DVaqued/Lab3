@@ -29,8 +29,8 @@ public class Vaquedano_Angel_Lab3 {
         while (true) {
             System.out.println("---Menu---");
             System.out.println("Ingrese 1 si quiere ir al ejercicio Piedra, Papel o Tijera"
-                    + "\n Ingrese 2 si quiere ir al ejercicio Suma."
-                    + "\n Ingrese 3 si desea ir al ejercicio 'Patrón numerico'");
+                    + "\nIngrese 2 si quiere ir al ejercicio Suma."
+                    + "\nIngrese 3 si desea ir al ejercicio 'Patrón numerico'");
             System.out.println("Favor ingrese el numero del ejercicio que desea realizar: ");
             ejercicio = lea.nextInt();
 
@@ -80,6 +80,31 @@ public class Vaquedano_Angel_Lab3 {
 
                 }
             }
+            if (ejercicio == 2) {
+                int contador = 0;
+                int resultado = 0;
+                int cadenanumeros = 0;
+                char numeroActual = 0;
+
+                System.out.println("Favor ingrese una cadena de numeros: ");
+                cadenanumeros = lea.nextInt();
+
+                String cambio = Integer.toString(cadenanumeros);
+
+                while (contador < cambio.length()) {
+                    numeroActual = cambio.charAt(contador);
+                    resultado += Character.getNumericValue(numeroActual);
+                    contador++;
+                    if (contador < cambio.length()) {
+                        System.out.print(numeroActual + "+");
+                    } else {
+                        System.out.print(numeroActual);
+                    }
+
+                }
+                System.out.println("=" + resultado);
+
             }
+        }
     }
 }
